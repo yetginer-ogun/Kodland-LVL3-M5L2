@@ -1,46 +1,46 @@
-# The Mapping Bot
+# Harita Botu
 
-This project is a bot that allows users to display specified cities on the map and to save cities for further display.
+Bu proje, kullanıcıların belirli şehirleri haritada görüntülemelerini ve şehirleri daha sonra görüntülemek için kaydetmelerini sağlayan bir bottur.
 
-## Key Features
+## Ana Özellikler
 
-- **Display cities on a map**: The bot can display selected cities on a map using Cartopy and Matplotlib libraries.
-- **Save cities**: Users can save cities they are interested in to their personal list.
-- **View saved cities**: Upon request, the bot can output a list of all cities saved by the user.
+- **Haritada şehirleri görüntüleme**: Bot, seçilen şehirleri Cartopy ve Matplotlib kütüphanelerini kullanarak haritada görüntüleyebilir.
+- **Şehirleri kaydetme**: Kullanıcılar, ilgilendikleri şehirleri kişisel listelerine kaydedebilir.
+- **Kaydedilen şehirleri görüntüleme**: İstek üzerine, bot kullanıcı tarafından kaydedilen tüm şehirlerin listesini çıkartabilir.
 
-## Technologies
+## Teknolojiler
 
-- **Python 3**: Programming language.
-- **SQLite**: Database for storing user and city information.
-- **Matplotlib and Cartopy**: Libraries for creating graphical data representations.
-- **Discord.py**: Library for creating and managing bots.
+- **Python 3**: Programlama dili.
+- **SQLite**: Kullanıcı ve şehir bilgilerini depolamak için veri tabanı.
+- **Matplotlib and Cartopy**: Grafiksel veri temsilleri oluşturmak için kütüphaneler.
+- **Discord.py**: Botları oluşturmak ve yönetmek için kütüphane.
 
-## Installation and Setup
+## Kurulum ve Başlangıç
 
-1. **Clone the repository:**
+1. **Depoyu klonlayın:**
     ```bash
-    git clone <url_to_repository>
-    cd <repository_name>
+    git clone <depo_baglantisi>
+    cd <depo_adi>
     ```
-2. **Install dependencies:**
+2. **Bağımlılıkları yükleyin:**
     ```bash
     pip install -r requirements.txt
     ```
-3. **Configure environment variables:**
-Open the `config.py` file in the root directory of the project and set the necessary variables:
+3. **Ortam değişkenlerini yapılandırın:**
+Projenin kök dizinindeki `config.py` dosyasını açın ve gerekli değişkenleri ayarlayın:
     ```bash
-    TOKEN=<your_bot_token>
+    TOKEN=<token_degeriniz>
     ```
-4. **Run the bot:**
+4. **Botu çalıştırın:**
     ```bash
     python bot.py
     ```
 
-## List of bot's commands
+## Bot komutları listesi:
 
-- `!start` - start working with the bot and receive a welcome message.\n"
-- `!help_me` - receive the list of available commands\n"
-- `!show_city <city_name>` - display the given city on the map.\n"
-- `!remember_city <city_name>` - remember the given city.\n"
-- `!show_my_cities` - display all the rememberd cities."
+- `!start` - Botu başlatın ve hoş geldiniz mesajı alın.\n"
+- `!help_me` - Mevcut komutların listesini alın. \n"
+- `!show_city <şehir_adı>` - Verilen şehri haritada görüntüleyin.\n"
+- `!remember_city <şehir_adı>` - Verilen şehri kaydedin.\n"
+- `!show_my_cities` -  Tüm hatırlanan şehirleri görüntüleyin."
         

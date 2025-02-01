@@ -38,9 +38,9 @@ Projenin kök dizinindeki `config.py` dosyasını açın ve gerekli değişkenle
 
 ## Bot komutları listesi:
 
-- `!start` - Botu başlatın ve hoş geldiniz mesajı alın.\n"
-- `!help_me` - Mevcut komutların listesini alın. \n"
-- `!show_city <şehir_adı>` - Verilen şehri haritada görüntüleyin.\n"
-- `!remember_city <şehir_adı>` - Verilen şehri kaydedin.\n"
+- `!start` - Botu başlatın ve hoş geldiniz mesajı alın."
+- `!help_me` - Mevcut komutların listesini alın. "
+- `!show_city <şehir_adı>` - Verilen şehri haritada görüntüleyin."
+- `!remember_city <şehir_adı>` - Verilen şehri kaydedin."
 - `!show_my_cities` -  Tüm hatırlanan şehirleri görüntüleyin."
         

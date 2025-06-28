@@ -20,17 +20,30 @@ async def start(ctx: commands.Context):
 @bot.command()
 async def help_me(ctx: commands.Context):
     await ctx.send(
-        # Kullanılabilir komutların listesini gösterecek olan komutu yazın.
+        "`!start` - bot ile çalışmaya başlayın ve bir hoş geldin mesajı alın.\n"
+        "`!help_me` - mevcut komutların listesini alın\n"
+        "`!show_city <şehir_adı>` - belirtilen şehri haritada gösterin.\n"
+        "`!remember_city <şehir_adı>` - belirtilen şehri kaydedin.\n"
+        "`!show_my_cities` - kaydettiğiniz tüm şehirleri gösterin."
     )
 
 @bot.command()
 async def show_city(ctx: commands.Context, *, city_name=""):
     # Belirtilen şehirle birlikte haritayı gösterecek komutu yazın.
+    if not city_name:
+        await ctx.send("Hatalı format. Lütfen şehir adını İngilizce olarak ve komuttan sonra bir boşluk bırakarak girin.")
+        return
+    manager.create_graph(f'{ctx.author.id}.png', [city_name])  # Belirtilen şehir için bir harita oluşturma
+    await ctx.send(file=discord.File(f'{ctx.author.id}.png'))
 
 @bot.command()
 async def show_my_cities(ctx: commands.Context):
     cities = manager.select_cities(ctx.author.id)  # Kullanıcının kaydettiği şehirlerin listesini alma
-
+    if cities:
+        manager.create_graph(f'{ctx.author.id}_cities.png', cities)  # Kullanıcının kaydettiği tüm şehirlerle bir harita oluşturma
+        await ctx.send(file=discord.File(f'{ctx.author.id}_cities.png'))
+    else:
+        await ctx.send("Henüz hiç şehir kaydetmediniz.")
     # Kullanıcının şehirleriyle birlikte haritayı gösterecek komutu yazın
 
 @bot.command()
